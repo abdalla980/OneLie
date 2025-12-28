@@ -1,109 +1,42 @@
 🎭 One Phone, One Lie
 
 One Phone, One Lie is an offline, in-person social deduction party game built with Flutter.
-One phone is passed around a group of friends. One player lies. Everyone watches.
+One phone is shared. One player lies. Everyone tries to catch them.
 
 No accounts. No internet. No setup.
 
 🕹️ How It Works
 
-Players sit together and share one phone
+Share one phone with 3–10 players
 
-Each round, one player is secretly chosen as the Liar
+One player is secretly the Liar
 
-A question appears
+Everyone answers a question out loud
 
-Everyone answers out loud
+Vote on who lied
 
-Players vote on who they think lied
-
-The liar is revealed
-
-Repeat
-
-👥 3–10 players · 📍 Same room · 📴 Offline
-
-🧠 Design Philosophy
-
-Zero friction — start playing in seconds
-
-Social-first — the game happens between people, not on the screen
-
-Short rounds, high tension
-
-Offline by design
+Reveal and repeat
 
 ✨ Features
 
-🎲 Random liar assignment
+Single-device, pass-the-phone gameplay
 
-🧑‍🤝‍🧑 Single-device, pass-the-phone gameplay
+600+ curated questions
 
-🗂️ 600+ curated questions
+Categories: Personal, Football, Preferences
 
-🧠 Social deduction & bluffing
+Optional rule twists (silent rounds, delayed reveals)
 
-🌙 Dark-mode friendly UI
+Fully offline
 
-⚙️ Optional rule modifiers:
+🛠️ Tech
 
-Silent rounds
-
-Delayed reveals
-
-Persistent liar consequences
-
-🗂️ Question Categories
-
-Personal
-Experiences, travel, preferences (not invasive)
-
-Football
-Modern football focus:
-
-Premier League
-
-La Liga (Real Madrid, Barcelona, Atlético Madrid)
-
-Preferences
-“This or That” style questions
-(e.g. Waffles or pancakes?)
-
-🛠️ Tech Stack
-
-Flutter
-
-Dart
-
-Local JSON content
-
-No backend
-
-No accounts
+Flutter · Dart · Local JSON · No backend
 
 🚧 Status
 
-In active development
-
-Real-world playtesting
-
-UX and pacing refinement
-
-Android-first release planned
+In active development · Android-first
 
 📄 License
 
 All rights reserved.
-Not open-source at this time.
-
-🎯 Goal
-
-Create a party game that:
-
-Starts instantly
-
-Feels different every round
-
-Makes people suspicious, loud, and laugh
-
-If players say “one more round”, it worked.
