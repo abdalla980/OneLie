@@ -1,60 +1,36 @@
-One Phone, One Lie 🎭
+🎭 One Phone, One Lie
 
 One Phone, One Lie is an offline, in-person social deduction party game built with Flutter.
-Players share a single phone, answer questions out loud, and try to uncover who is lying — using nothing but intuition, reactions, and social pressure.
+Friends gather around, share one phone, answer questions out loud — and try to figure out who is lying.
 
-No accounts. No internet. One phone. One lie.
+No accounts. No internet. No setup.
+Just tension, reactions, and chaos.
 
-Table of Contents
+✨ Why This Game Exists
 
-Overview
+Most party games are:
 
-How It Works
+Too complicated to explain
 
-Core Features
+Too repetitive
 
-Game Design Principles
+Too dependent on multiple devices or internet
 
-Question Categories
+Overdesigned and under-social
 
-Tech Stack
+One Phone, One Lie is built around a simple idea:
 
-Project Structure
+The phone should support the social interaction — not replace it.
 
-Getting Started
+The real game happens between players, not on the screen.
 
-Running the App
+🕹️ Gameplay Overview
 
-Current Status
+One phone is shared between all players
 
-Roadmap
+Each round:
 
-Contributing
-
-License
-
-Overview
-
-One Phone, One Lie is designed for real-life group play.
-Friends sit together and pass one phone around. Each round, one player is secretly chosen as the liar. Everyone answers the same question — except the liar, who must blend in.
-
-The fun comes from:
-
-Reading body language
-
-Overthinking simple answers
-
-Accusing friends
-
-Watching reactions when the truth is revealed
-
-The game is optimized for parties, trips, and casual hangouts.
-
-How It Works
-
-Players gather around and share one phone
-
-The game secretly assigns a Liar
+One player is secretly chosen as the Liar
 
 A question appears
 
@@ -62,63 +38,64 @@ Everyone answers out loud
 
 Players vote on who they think lied
 
-The liar is revealed
+The truth is revealed
 
-Special rules or consequences may apply
+Special rules can modify how rounds behave
 
-Next round begins
+Repeat for as many rounds as the group wants
 
-Supports 3–10 players.
+👥 Players: 3–10
+📍 Setting: Same room, same phone
+📴 Internet: Not required
 
-Core Features
+🧠 Game Design Principles
 
-🎲 Random role assignment (liar / truth-teller)
+Zero friction
+Start playing in seconds. No accounts, no tutorials.
 
-🧠 Social deduction gameplay
+Psychological tension over mechanics
+Body language, hesitation, and confidence matter more than rules.
 
-🗂️ Multiple question categories
+Short rounds, high replayability
+Easy to say “just one more round.”
 
-🔁 High replayability with large question pool
+Offline-first by design
+Built for parties, trips, cafés, and living rooms.
 
-📴 Fully offline (no internet required)
+🧩 Core Features
 
-📱 Single-device, pass-the-phone design
+🎲 Random liar assignment
 
-🌙 Dark-mode friendly UI for low-light environments
+🧑‍🤝‍🧑 Single-device, pass-the-phone gameplay
 
-🧩 Optional advanced rule modes:
+🗂️ Large question database (600+ questions)
+
+🧠 Social deduction & bluffing mechanics
+
+📴 Fully offline
+
+🌙 Dark-mode friendly UI
+
+⚙️ Optional advanced rules:
 
 Silent rounds
 
 Delayed reveals
 
-Persistent liar consequences
+Persistent consequences for liars
 
-Game Design Principles
+🗂️ Question Categories
 
-Zero friction
-No sign-ups, no setup, no explanations longer than a few seconds.
+All questions are stored locally in a JSON file for easy iteration and expansion.
 
-Real social interaction first
-The phone supports the game — it doesn’t replace the players.
-
-Short rounds, strong tension
-Each round should feel fast, uncomfortable (in a fun way), and memorable.
-
-Offline by design
-Built for rooms, not servers.
-
-Question Categories
-
-The game uses a large, curated JSON-based question system.
-
-Current categories include:
+Current Categories
 
 Personal
-Travel, experiences, preferences, goals (safe, not invasive)
+Experiences, travel, preferences, memories
+(intentionally not invasive or uncomfortable)
 
 Football
-Modern football questions focused on:
+Modern football questions with a focus on:
 
 Premier League
 
@@ -130,9 +107,9 @@ Preferences
 “This or That” style questions
 (e.g. Waffles or pancakes? City trip or beach trip?)
 
-Each category contains 200+ questions to ensure replayability.
+Each category contains 200+ curated questions to ensure replayability.
 
-Tech Stack
+🛠️ Tech Stack
 
 Flutter
 
@@ -142,12 +119,14 @@ Local JSON asset loading
 
 No backend
 
-No analytics (for now)
+No user accounts
 
-Project Structure
+No analytics (by design, for now)
+
+📂 Project Structure
 oneline/
 ├── assets/
-│   └── questions.json      # All game questions
+│   └── questions.json        # Question database
 ├── lib/
 │   ├── main.dart
 │   ├── screens/
@@ -156,76 +135,84 @@ oneline/
 ├── pubspec.yaml
 └── README.md
 
-Getting Started
+🚀 Getting Started
 Prerequisites
 
 Flutter SDK (3.x)
 
 Dart
 
-Android Studio / VS Code
+Android Studio or VS Code
 
 Android emulator or physical device
 
-Running the App
-
-Clone the repository:
-
+Installation
 git clone https://github.com/your-username/oneline.git
-
-
-Install dependencies:
-
+cd oneline
 flutter pub get
-
-
-Run the app:
-
 flutter run
 
-Current Status
+🧪 Project Status
 
 🚧 In active development
 
-Core game flow implemented
+Current focus:
 
-Question system integrated
+UX polish
 
-UX testing with real players ongoing
+Real-world playtesting
+
+Improving pacing and reveal moments
 
 Preparing Android-first release
 
-The project is intentionally kept lean to support fast iteration.
+This project is intentionally kept lean to allow fast iteration.
 
-Roadmap
+🗺️ Roadmap
 
- Polish UI animations and transitions
+ Refine round pacing & reveal animations
 
  Add rule presets (Casual / Chaos / Psychological)
 
- Improve voting & reveal pacing
+ Sound effects & haptic feedback
 
- Add sound & haptic feedback
+ Improved voting UX
 
- Internal playtesting rounds
+ Internal playtesting builds
 
- Android release
+ Android Play Store release
 
  iOS release (later)
 
-Contributing
+🤝 Contributing & Feedback
 
 This is currently a personal side project, but feedback is welcome.
 
-If you want to contribute:
+Ways to contribute:
 
-Open an issue for bugs or suggestions
+Report bugs or UX confusion
+
+Suggest rule ideas
 
 Share playtesting feedback
 
-Propose improvements to game flow or UX
+Propose improvements via issues
 
-License
+📄 License
 
-All rights reserved
+All rights reserved.
 This project is not open-source at this time.
+
+🧠 Final Note
+
+This game is designed to be:
+
+Easy to start
+
+Hard to master
+
+Fun to argue about
+
+Different every time
+
+If it causes laughter, suspicion, or “okay one more round” — it’s working.
