@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionScreen extends StatelessWidget {
   final int questionNumber;
@@ -34,20 +35,18 @@ class QuestionScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 'ONE PHONE',
-                style: TextStyle(
-                  fontSize: 28,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
-                  letterSpacing: 2,
                 ),
               ),
               Text(
                 'ONE LIE',
-                style: TextStyle(
-                  fontSize: 28,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
-                  letterSpacing: 2,
                 ),
               ),
               const SizedBox(height: 40),
@@ -57,9 +56,10 @@ class QuestionScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
                   child: Text(
                     'Question $questionNumber:',
-                    style: const TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w300
                     ),
                   ),
                 ),
@@ -68,10 +68,9 @@ class QuestionScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Center(
-                    child: Text(
+                  child: Text(
                       question,
-                      style: const TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 22,
                       ),
@@ -79,7 +78,7 @@ class QuestionScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
+Spacer(flex: 1),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 padding: const EdgeInsets.all(20),
@@ -87,34 +86,37 @@ class QuestionScreen extends StatelessWidget {
                   color: const Color(0xFFFFC700),
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: const Text(
+                child: Text(
                   'Each player answers out loud. When everyone is done, start voting.',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     color: Colors.black,
                     fontSize: 16,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
+              Spacer(flex: 1),
+
               Padding(
                 padding: const EdgeInsets.all(40.0),
                 child: ElevatedButton(
                   onPressed: onStartVoting,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF87CEEB),
-                    padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 18),
+                    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     minimumSize: const Size(double.infinity, 0),
                   ),
-                  child: const Text(
+                  child: Text(
                     'START VOTING',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
+                    style: GoogleFonts.poppins(
+                      color: const Color(0xFF0A0A2E),
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class VotingScreen extends StatefulWidget {
   final String currentPlayer;
@@ -45,20 +46,18 @@ class _VotingScreenState extends State<VotingScreen> {
               const SizedBox(height: 10),
               Text(
                 'ONE PHONE',
-                style: TextStyle(
-                  fontSize: 28,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
-                  letterSpacing: 2,
                 ),
               ),
               Text(
                 'ONE LIE',
-                style: TextStyle(
-                  fontSize: 28,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
-                  letterSpacing: 2,
                 ),
               ),
               const SizedBox(height: 40),
@@ -68,7 +67,7 @@ class _VotingScreenState extends State<VotingScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
                   child: Text(
                     '${widget.currentPlayer}, Who do you think is lying?',
-                    style: const TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Colors.white,
                       fontSize: 22,
                     ),
@@ -103,7 +102,7 @@ class _VotingScreenState extends State<VotingScreen> {
                             child: Center(
                               child: Text(
                                 player,
-                                style: const TextStyle(
+                                style: GoogleFonts.poppins(
                                   color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.w500,
@@ -128,20 +127,20 @@ class _VotingScreenState extends State<VotingScreen> {
                         },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF87CEEB),
-                    padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 18),
+                    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     minimumSize: const Size(double.infinity, 0),
-                    disabledBackgroundColor: Colors.grey,
                   ),
                   child: Text(
                     widget.canReveal ? 'Reveal the Lier' : 'Next Vote',
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
+                    style: GoogleFonts.poppins(
+                      color: selectedPlayer == null ? const Color(0xFF0A0A2E).withOpacity(0.5) : const Color(0xFF0A0A2E),
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

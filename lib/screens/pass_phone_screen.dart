@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PassPhoneScreen extends StatelessWidget {
   final String playerName;
@@ -28,20 +29,18 @@ class PassPhoneScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 'ONE PHONE',
-                style: TextStyle(
-                  fontSize: 28,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
-                  letterSpacing: 2,
                 ),
               ),
               Text(
                 'ONE LIE',
-                style: TextStyle(
-                  fontSize: 28,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
-                  letterSpacing: 2,
                 ),
               ),
               Expanded(
@@ -49,24 +48,24 @@ class PassPhoneScreen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
+                      Text(
                         'Pass the phone',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 24,
                         ),
                       ),
                       Text(
                         'To $playerName',
-                        style: const TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 24,
                         ),
                       ),
                       const SizedBox(height: 40),
-                      const Text(
+                      Text(
                         'Others look away 👀',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 20,
                         ),
@@ -81,16 +80,16 @@ class PassPhoneScreen extends StatelessWidget {
                   onPressed: onNext,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF87CEEB),
-                    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 120, vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     minimumSize: const Size(double.infinity, 0),
                   ),
-                  child: const Text(
+                  child: Text(
                     'Next',
-                    style: TextStyle(
-                      color: Colors.black,
+                    style: GoogleFonts.poppins(
+                      color: const Color(0xFF0A0A2E),
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),

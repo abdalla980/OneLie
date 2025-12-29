@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'category_screen.dart';
 
 class WinnerScreen extends StatelessWidget {
@@ -42,26 +43,24 @@ class WinnerScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 'ONE PHONE',
-                style: TextStyle(
-                  fontSize: 28,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
-                  letterSpacing: 2,
                 ),
               ),
               Text(
                 'ONE LIE',
-                style: TextStyle(
-                  fontSize: 28,
+                style: GoogleFonts.bebasNeue(
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
-                  letterSpacing: 2,
                 ),
               ),
               const SizedBox(height: 40),
               Text(
                 '${winner.toUpperCase()} IS THE',
-                style: const TextStyle(
+                style: GoogleFonts.poppins(
                   color: Colors.white,
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -69,7 +68,7 @@ class WinnerScreen extends StatelessWidget {
               ),
               Text(
                 'WINNER!',
-                style: const TextStyle(
+                style: GoogleFonts.poppins(
                   color: Colors.white,
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
@@ -94,7 +93,7 @@ class WinnerScreen extends StatelessWidget {
                           children: [
                             Text(
                               player,
-                              style: const TextStyle(
+                              style: GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 20,
                                 fontWeight: FontWeight.w500,
@@ -102,7 +101,7 @@ class WinnerScreen extends StatelessWidget {
                             ),
                             Text(
                               '$score',
-                              style: const TextStyle(
+                              style: GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -121,17 +120,17 @@ class WinnerScreen extends StatelessWidget {
                   onPressed: onNewGame,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF87CEEB),
-                    padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 18),
+                    padding: const EdgeInsets.symmetric(horizontal: 120, vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     minimumSize: const Size(double.infinity, 0),
                   ),
-                  child: const Text(
+                  child: Text(
                     'Start Another game',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
+                    style: GoogleFonts.poppins(
+                      color: const Color(0xFF0A0A2E),
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

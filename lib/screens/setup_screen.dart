@@ -306,7 +306,7 @@ class _SetupScreenState extends State<SetupScreen> {
                     backgroundColor: players.length < 3
                         ? Colors.grey[600]
                         : const Color(0xFFFFC700),
-                    padding: const EdgeInsets.symmetric(vertical: 18),
+                    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -315,10 +315,11 @@ class _SetupScreenState extends State<SetupScreen> {
                   child: Text(
                     'Start Game',
                     style: GoogleFonts.poppins(
-                      color: players.length < 3 ? Colors.grey[300] : Colors.black,
-                      fontSize: 20,
+                      color: players.length < 3 ? Colors.grey[300] : const Color(0xFF0A0A2E),
+                      fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
