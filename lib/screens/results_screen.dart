@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ResultsScreen extends StatelessWidget {
   final String liar;
@@ -41,7 +40,7 @@ class ResultsScreen extends StatelessWidget {
                     const Spacer(),
                     Text(
                       'Round $round / $totalRounds',
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18,
                       ),
@@ -53,24 +52,26 @@ class ResultsScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 'ONE PHONE',
-                style: GoogleFonts.bebasNeue(
-                  fontSize: 35,
+                style: TextStyle(
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
+                  letterSpacing: 2,
                 ),
               ),
               Text(
                 'ONE LIE',
-                style: GoogleFonts.bebasNeue(
-                  fontSize: 35,
+                style: TextStyle(
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
+                  letterSpacing: 2,
                 ),
               ),
               const SizedBox(height: 40),
               Text(
                 '$liar was the Lier',
-                style: GoogleFonts.poppins(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 24,
                   fontWeight: FontWeight.w500,
@@ -97,7 +98,7 @@ class ResultsScreen extends StatelessWidget {
                           children: [
                             Text(
                               player,
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
                                 color: isTop ? Colors.white : Colors.black,
                                 fontSize: 20,
                                 fontWeight: FontWeight.w500,
@@ -105,7 +106,7 @@ class ResultsScreen extends StatelessWidget {
                             ),
                             Text(
                               '$score',
-                              style: GoogleFonts.poppins(
+                              style: TextStyle(
                                 color: isTop ? Colors.white : Colors.black,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -124,7 +125,7 @@ class ResultsScreen extends StatelessWidget {
                   onPressed: onNext,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF87CEEB),
-                    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 18),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -132,12 +133,11 @@ class ResultsScreen extends StatelessWidget {
                   ),
                   child: Text(
                     round < totalRounds ? 'Next Question' : 'See Winner',
-                    style: GoogleFonts.poppins(
-                      color: const Color(0xFF0A0A2E),
-                      fontSize: 22,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

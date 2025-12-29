@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LieHonestScreen extends StatelessWidget {
   final String playerName;
@@ -33,18 +32,20 @@ class LieHonestScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Text(
                 'ONE PHONE',
-                style: GoogleFonts.bebasNeue(
-                  fontSize: 35,
+                style: TextStyle(
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
+                  letterSpacing: 2,
                 ),
               ),
               Text(
                 'ONE LIE',
-                style: GoogleFonts.bebasNeue(
-                  fontSize: 35,
+                style: TextStyle(
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
+                  letterSpacing: 2,
                 ),
               ),
               Expanded(
@@ -54,7 +55,7 @@ class LieHonestScreen extends StatelessWidget {
                     children: [
                       Text(
                         '$playerName,',
-                        style: GoogleFonts.poppins(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 28,
                           fontWeight: FontWeight.w500,
@@ -62,38 +63,38 @@ class LieHonestScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       if (shouldLie) ...[
-                        Text(
+                        const Text(
                           'You must',
-                          style: GoogleFonts.poppins(color: Colors.white, fontSize: 24),
+                          style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
                         const SizedBox(height: 10),
-                        Text(
+                        const Text(
                           'Lie',
-                          style: GoogleFonts.poppins(
+                          style: TextStyle(
                             color: Colors.white,
                             fontSize: 32,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         const SizedBox(height: 10),
-                        Text(
+                        const Text(
                           'Be convincing.',
-                          style: GoogleFonts.poppins(color: Colors.white, fontSize: 24),
+                          style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
                       ] else ...[
-                        Text(
+                        const Text(
                           'You may answer the',
-                          style: GoogleFonts.poppins(color: Colors.white, fontSize: 24),
+                          style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
                         const SizedBox(height: 10),
-                        Text(
+                        const Text(
                           'upcoming question',
-                          style: GoogleFonts.poppins(color: Colors.white, fontSize: 24),
+                          style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
                         const SizedBox(height: 10),
-                        Text(
-                          'HONESTLY',
-                          style: GoogleFonts.poppins(
+                        const Text(
+                          '**HONESTLY**',
+                          style: TextStyle(
                             color: Colors.white,
                             fontSize: 32,
                             fontWeight: FontWeight.bold,
@@ -101,13 +102,13 @@ class LieHonestScreen extends StatelessWidget {
                         ),
                       ],
                       const SizedBox(height: 40),
-                      Text(
+                      const Text(
                         'Don\'t reveal this',
-                        style: GoogleFonts.poppins(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'screen.',
-                        style: GoogleFonts.poppins(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ],
                   ),
@@ -119,16 +120,16 @@ class LieHonestScreen extends StatelessWidget {
                   onPressed: () => Navigator.pop(context),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF87CEEB),
-                    padding: const EdgeInsets.symmetric(horizontal: 120, vertical: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     minimumSize: const Size(double.infinity, 0),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Next',
-                    style: GoogleFonts.poppins(
-                      color: const Color(0xFF0A0A2E),
+                    style: TextStyle(
+                      color: Colors.black,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),

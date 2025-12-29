@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class RoundNumberScreen extends StatelessWidget {
   final int round;
@@ -38,18 +37,20 @@ class RoundNumberScreen extends StatelessWidget {
                     children: [
                       Text(
                         'ONE PHONE',
-                        style: GoogleFonts.bebasNeue(
-                          fontSize: 35,
+                        style: TextStyle(
+                          fontSize: 28,
                           fontWeight: FontWeight.bold,
                           color: const Color(0xFFFFC700),
+                          letterSpacing: 2,
                         ),
                       ),
                       Text(
                         'ONE LIE',
-                        style: GoogleFonts.bebasNeue(
-                          fontSize: 35,
+                        style: TextStyle(
+                          fontSize: 28,
                           fontWeight: FontWeight.bold,
                           color: const Color(0xFFFFC700),
+                          letterSpacing: 2,
                         ),
                       ),
                       const SizedBox(height: 60),
@@ -63,8 +64,8 @@ class RoundNumberScreen extends StatelessWidget {
                         child: Center(
                           child: Text(
                             '$round',
-                            style: GoogleFonts.poppins(
-                              color: const Color(0xFF0A0A2E),
+                            style: const TextStyle(
+                              color: Color(0xFF0A0A2E),
                               fontSize: 64,
                               fontWeight: FontWeight.bold,
                             ),

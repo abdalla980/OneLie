@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class QuestionScreen extends StatelessWidget {
   final int questionNumber;
@@ -35,18 +34,20 @@ class QuestionScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 'ONE PHONE',
-                style: GoogleFonts.bebasNeue(
-                  fontSize: 35,
+                style: TextStyle(
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
+                  letterSpacing: 2,
                 ),
               ),
               Text(
                 'ONE LIE',
-                style: GoogleFonts.bebasNeue(
-                  fontSize: 35,
+                style: TextStyle(
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFFFFC700),
+                  letterSpacing: 2,
                 ),
               ),
               const SizedBox(height: 40),
@@ -56,10 +57,9 @@ class QuestionScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
                   child: Text(
                     'Question $questionNumber:',
-                    style: GoogleFonts.poppins(
+                    style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w300
+                      fontSize: 20,
                     ),
                   ),
                 ),
@@ -68,9 +68,10 @@ class QuestionScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Text(
+                  child: Center(
+                    child: Text(
                       question,
-                      style: GoogleFonts.poppins(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 22,
                       ),
@@ -78,7 +79,7 @@ class QuestionScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-Spacer(flex: 1),
+              ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 padding: const EdgeInsets.all(20),
@@ -86,37 +87,34 @@ Spacer(flex: 1),
                   color: const Color(0xFFFFC700),
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: Text(
+                child: const Text(
                   'Each player answers out loud. When everyone is done, start voting.',
-                  style: GoogleFonts.poppins(
+                  style: TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ),
-              Spacer(flex: 1),
-
               Padding(
                 padding: const EdgeInsets.all(40.0),
                 child: ElevatedButton(
                   onPressed: onStartVoting,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF87CEEB),
-                    padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 18),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     minimumSize: const Size(double.infinity, 0),
                   ),
-                  child: Text(
+                  child: const Text(
                     'START VOTING',
-                    style: GoogleFonts.poppins(
-                      color: const Color(0xFF0A0A2E),
-                      fontSize: 22,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
