@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'game_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SetupScreen extends StatefulWidget {
   final String categoryId;
@@ -52,17 +53,17 @@ class _SetupScreenState extends State<SetupScreen> {
           title: const Text('Add Player', style: TextStyle(color: Colors.white)),
           content: TextField(
             controller: controller,
-            style: const TextStyle(color: Colors.white),
-            decoration: const InputDecoration(
+            style:  GoogleFonts.poppins(color: Colors.white),
+            decoration: InputDecoration(
               hintText: 'Player name',
-              hintStyle: TextStyle(color: Colors.grey),
+              hintStyle: GoogleFonts.poppins(color: Colors.grey),
             ),
             autofocus: true,
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('Cancel', style: TextStyle(color: Colors.white)),
+              child: Text('Cancel', style: GoogleFonts.poppins(color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -74,7 +75,7 @@ class _SetupScreenState extends State<SetupScreen> {
                   Navigator.pop(context);
                 }
               },
-              child: const Text('Add', style: TextStyle(color: Colors.white)),
+              child: Text('Add', style: GoogleFonts.poppins(color: Colors.white)),
             ),
           ],
         );
@@ -110,16 +111,16 @@ class _SetupScreenState extends State<SetupScreen> {
               ),
               const SizedBox(height: 10),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 40),
-                padding: const EdgeInsets.symmetric(vertical: 15),
+                margin: const EdgeInsets.symmetric(horizontal: 100),
+                padding: const EdgeInsets.symmetric(vertical: 5),
                 decoration: BoxDecoration(
                   color: const Color(0xFFFFC700),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: const Center(
+                child: Center(
                   child: Text(
                     'Players',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -134,8 +135,8 @@ class _SetupScreenState extends State<SetupScreen> {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 40),
                           child: Text(
-                            'No players yet. Tap "Add Player" to get started!',
-                            style: TextStyle(
+                            'No players yet. Tap "Add Player" to get started!\n\nYou need at least 3 players to start the game.',
+                            style: GoogleFonts.poppins(
                               color: Colors.grey[400],
                               fontSize: 16,
                             ),
@@ -160,7 +161,7 @@ class _SetupScreenState extends State<SetupScreen> {
                                 Expanded(
                                   child: Text(
                                     players[index],
-                                    style: const TextStyle(
+                                    style:  GoogleFonts.poppins(
                                       color: Colors.black,
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500,
@@ -188,14 +189,14 @@ class _SetupScreenState extends State<SetupScreen> {
                 ),
                 child: InkWell(
                   onTap: _addPlayer,
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.add, color: Colors.white, size: 24),
                       SizedBox(width: 8),
                       Text(
                         'Add Player',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
@@ -205,10 +206,10 @@ class _SetupScreenState extends State<SetupScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
-              const Text(
+              const SizedBox(height: 40),
+              Text(
                 'Choose Game Length',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color: Colors.white,
                   fontSize: 20,
                 ),
@@ -244,7 +245,7 @@ class _SetupScreenState extends State<SetupScreen> {
                           children: [
                             Text(
                               length,
-                              style: const TextStyle(
+                              style:  GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -254,7 +255,7 @@ class _SetupScreenState extends State<SetupScreen> {
                               length == 'Endless'
                                   ? 'No end'
                                   : '${_lengthRounds[length]} Rounds',
-                              style: const TextStyle(
+                              style: GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 14,
                               ),
@@ -267,10 +268,27 @@ class _SetupScreenState extends State<SetupScreen> {
                 ),
               ),
               const SizedBox(height: 20),
+              if (players.length < 3)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Text(
+                    players.isEmpty
+                        ? 'Add at least 3 players to start the game'
+                        : 'Add ${3 - players.length} more player${3 - players.length == 1 ? '' : 's'} to start the game',
+                    style: GoogleFonts.poppins(
+                      color: Colors.orange[300],
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              if (players.length < 3) const SizedBox(height: 10),
+              Spacer(),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 40),
                 child: ElevatedButton(
-                  onPressed: players.isEmpty
+                  onPressed: players.length < 3
                       ? null
                       : () {
                           Navigator.push(
@@ -285,17 +303,19 @@ class _SetupScreenState extends State<SetupScreen> {
                           );
                         },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFFFC700),
+                    backgroundColor: players.length < 3
+                        ? Colors.grey[600]
+                        : const Color(0xFFFFC700),
                     padding: const EdgeInsets.symmetric(vertical: 18),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     minimumSize: const Size(double.infinity, 0),
                   ),
-                  child: const Text(
+                  child: Text(
                     'Start Game',
-                    style: TextStyle(
-                      color: Colors.black,
+                    style: GoogleFonts.poppins(
+                      color: players.length < 3 ? Colors.grey[300] : Colors.black,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
@@ -317,9 +337,9 @@ class _SetupScreenState extends State<SetupScreen> {
                     ),
                     minimumSize: const Size(double.infinity, 0),
                   ),
-                  child: const Text(
+                  child:Text(
                     'Change Category',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Color(0xFF0A0A2E),
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
