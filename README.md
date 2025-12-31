@@ -1,16 +1,33 @@
-# oneline
+##One Lie
 
-A new Flutter project.
+**One-line gameplay description:**  
+A fast-paced game where the player must react quickly, make smart choices, and survive as long as possible to achieve a high score.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🕹️ About the Game
+This game is built with **Flutter** and focuses on simple mechanics that are easy to learn but challenging to master. Each round pushes the player to improve timing, accuracy, and decision-making.
 
-A few resources to get you started if this is your first Flutter project:
+The objective is simple: **stay alive, score points, and beat your best run**.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✨ Features
+- Smooth and responsive gameplay  
+- Clean UI built with Flutter  
+- Increasing difficulty over time  
+- Cross-platform support (Android, iOS, Web*)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK installed  
+- A device or emulator  
+
+### Run the game
+```bash
+flutter pub get
+flutter run
+
