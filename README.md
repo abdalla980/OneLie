@@ -1,4 +1,4 @@
-##One Lie
+## One Lie
 
 **One-line gameplay description:**  
 A fast-paced game where the player must react quickly, make smart choices, and survive as long as possible to achieve a high score.
