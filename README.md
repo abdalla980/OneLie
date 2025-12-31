@@ -1,30 +1,28 @@
 ## One Lie
 
-**One-line gameplay description:**  
-A fast-paced game where the player must react quickly, make smart choices, and survive as long as possible to achieve a high score.
-
+Someone is always lying, find the lier. 
 ---
 
 ## 🕹️ About the Game
-This game is built with **Flutter** and focuses on simple mechanics that are easy to learn but challenging to master. Each round pushes the player to improve timing, accuracy, and decision-making.
+This game is built with **Flutter** and is the perfect game for gatherings with friends, Needs one phone & works without internet!
 
-The objective is simple: **stay alive, score points, and beat your best run**.
+The objective is simple: **Catch the lier**.
 
 ---
 
 ## ✨ Features
 - Smooth and responsive gameplay  
-- Clean UI built with Flutter  
-- Increasing difficulty over time  
+- Clean UI built with Figma & Flutter
 - Cross-platform support (Android, iOS, Web*)
-
+- Simple to understand
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Flutter SDK installed  
-- A device or emulator  
+- A device or emulator
+- The game will be out on Google play soon!
 
 ### Run the game
 ```bash
